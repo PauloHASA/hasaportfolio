@@ -7,11 +7,16 @@ import HeaderGlobal from "./HeaderGlobal"
 import translations from "../data/translations.json"
 
 function LandingPage() {
-  const [language, setLanguege] = useState('pt');
+  const [language, setLanguage] = useState('pt');
+
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang);
+    
+  };
 
   return(
     <>
-      <HeaderGlobal />
+      <HeaderGlobal language={language} setLanguage={handleLanguageChange} />
       <main  className="flex display-flex-column main-landingPage">
         <div className="row flex">
           <div className="col principal-container">

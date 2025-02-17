@@ -13,13 +13,18 @@ import "../../styles/About.css"
 
 
 function About(){
-    const [language, setLanguege] = useState('pt');
+    const [language, setLanguage] = useState('pt');
     const location = useLocation();
     const isMyExperience = location.hash === '#my-experience';
+
+    const handleLanguageChange = (lang) => {
+      setLanguage(lang);
+      
+    };
   
   return(
     <>
-      <HeaderGlobal />
+      <HeaderGlobal language={language} setLanguage={handleLanguageChange} />
       <div className="flex display-flex-column body-aboutMe">
         <div className="back-to-pages">
           <Link to={"/"}>

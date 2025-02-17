@@ -10,12 +10,16 @@ import images from "../../assets/imagesMaps";
 import "../../styles/Projects.css"
 
 function Project(){
-  const [language, setLanguege] = useState('pt');
-  
+  const [language, setLanguage] = useState('pt');
+
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang);
+    
+  };  
   
   return(
     <>
-      <HeaderGlobal />
+      <HeaderGlobal language={language} setLanguage={handleLanguageChange} />
       <div className="back-to-pages">
         <Link to={"/"}>
           {translations[language].home}

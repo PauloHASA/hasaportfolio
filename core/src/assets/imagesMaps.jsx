@@ -23,6 +23,9 @@ import wellnova_img from "./icons/wellnova-img.png";
 import wellnova_legenda from "./icons/wellnova-legenda.png";
 import digitalpm from "./icons/digitalpm.png";
 import logo_digitalpm from "./icons/logo_digitalpm.svg";
+import icon_brasil from "./icons/icon-brasil.png";
+import icon_usa from "./icons/icon-usa.png";
+import icon_espanha from "./icons/icon-espanha.png";
 
 
 const images = {
@@ -51,7 +54,9 @@ const images = {
     wellnova_legenda:wellnova_legenda,
     digitalpm:digitalpm,
     logo_digitalpm:logo_digitalpm,
-
+    icon_brasil:icon_brasil,
+    icon_usa:icon_usa,
+    icon_espanha:icon_espanha,
   }
 };
 
