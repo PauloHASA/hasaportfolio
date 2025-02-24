@@ -26,6 +26,11 @@ import logo_digitalpm from "./icons/logo_digitalpm.svg";
 import icon_brasil from "./icons/icon-brasil.png";
 import icon_usa from "./icons/icon-usa.png";
 import icon_espanha from "./icons/icon-espanha.png";
+import nodejs from "./icons/nodejs.svg";
+import django from "./icons/django.svg";
+import img_1 from "./parallax-img/img-1.png";
+import img_2 from "./parallax-img/img-2.png";
+import img_3 from "./parallax-img/img-3.png";
 
 
 const images = {
@@ -43,6 +48,8 @@ const images = {
     typescript:typescript,
     tailwind:tailwind,
     vite:vite,
+    nodejs:nodejs,
+    django:django,
     bitbucket:bitbucket,
     nextjs:nextjs,
     on_icon:on_icon,
@@ -57,6 +64,11 @@ const images = {
     icon_brasil:icon_brasil,
     icon_usa:icon_usa,
     icon_espanha:icon_espanha,
+  },
+  paralla_img:{
+    img_1:img_1,
+    img_2:img_2,
+    img_3:img_3,
   }
 };
 

@@ -119,7 +119,7 @@
 }
 
 .body-page-aboutMe {
-  height: calc(100vh - 84px);
+  height: calc(100vh - 118px);
   overflow: auto;
 
   .full-page {
@@ -140,8 +140,8 @@
 
   .body-mySkills {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    
+    flex-direction: column;
 
     width: 100%;
   }
@@ -149,12 +149,9 @@
   main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
-    /* Ajusta automaticamente as colunas */
     gap: 12px;
-    /* Espaçamento entre as caixas */
-    width: 85%;
-    /* Garante que o container ocupe toda a largura da tela */
-
+    width: 100%;
+    margin-bottom: 2rem;
 
     .box {
       height: 112px;
@@ -165,6 +162,7 @@
       /* Adicionando fundo leve para destacar */
       border-radius: 8px;
       transition: transform 0.4s ease-in-out, margin 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    padding: 10px;
     }
 
     .box:hover {
@@ -180,8 +178,10 @@
     }
 
     .box img {
+      width: 100%;
       height: auto;
-      width: 70%;
+      max-height: 100%;
+      object-fit: contain;
       /* Ajuste o tamanho da imagem dentro da box */
     }
   }
@@ -235,8 +235,69 @@ header .name img {
 
 
 .title-aboutMe {
-  margin-bottom: 36px;
+  margin-bottom: 2rem;
   font-family: var(--font-titles);
   font-weight: 200;
+
+}
+
+.skills-level{
+
+  section{
+
+    margin-bottom: 1rem;
+    .row-skillsLevel{
+
+      .col{
+    
+        h2{
+          font-family: var(--font-titles);
+          font-size: 1.5rem;
+          margin-bottom:0.5rem;
+    
+          display: flex;
+          align-items: center;
+          gap: 12px;
+    
+          button{
+            background: transparent;
+            border: none;
+          }
+        }
+    
+        .progress{
+    
+          height: 0.7rem;
+    
+          .progress-bar{
+            background-color: var(--highlight-color);
+          }
+        }
+      }
+    
+    }
+    .open{
+      margin-top: 0.5rem;
+      h3{
+        font-family: var(--font-text);
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+
+
+.default-icon-skillsLevel{
+  height: 60px;
+  width: 60px;
+  padding: 8px;
+
+  img{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+  }
 
 }

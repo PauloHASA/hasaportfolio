@@ -44,9 +44,10 @@ button {
 
 body {
   background: linear-gradient(135deg, #1d1539, #18132f, #20183c);
+  /* background: #0c0553; */
   height: 100vh;
 
-  padding: 24px;
+  padding: 1rem;
 
   overflow: hidden;
 

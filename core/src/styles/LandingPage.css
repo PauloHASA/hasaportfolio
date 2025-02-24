@@ -1,5 +1,9 @@
 .main-landingPage {
 
+  .row{
+    overflow: auto;
+  }
+
   .principal-container,
   .nav-principal {
     display: flex;
@@ -195,3 +199,30 @@
 .tooltip-container:hover .icon-hover {
   display: inline-block;
 }
+
+
+.img-parallax{
+  
+}
+
+.row-fullpage{
+
+  .fullPage{
+    height: 100%;
+  }
+
+  .fullPage.homePage,
+  .fullPage.aboutMe{
+    display: flex;
+    align-items: center;
+  }
+
+  .fullPage.aboutMe{
+
+    .row{
+      width: 100%;
+    }
+  }
+}
+
+

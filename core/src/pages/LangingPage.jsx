@@ -6,6 +6,11 @@ import { useState } from "react";
 import HeaderGlobal from "./HeaderGlobal"
 import translations from "../data/translations.json"
 
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+
+import Images from "../assets/imagesMaps";
+
+
 function LandingPage() {
   const [language, setLanguage] = useState('pt');
 
@@ -16,10 +21,11 @@ function LandingPage() {
 
   return(
     <>
-      <HeaderGlobal language={language} setLanguage={handleLanguageChange} />
       <main  className="flex display-flex-column main-landingPage">
-        <div className="row flex">
-          <div className="col principal-container">
+        <HeaderGlobal language={language} setLanguage={handleLanguageChange} />
+        <div className="row flex justify-content-md-center row-fullpage">
+          <div className="col-9">
+            <div className="fullPage homePage" id="homePage">
             <section>
               <h4> {translations[language].greeting} <span>{translations[language].name}</span></h4>
               <div className="border-line"></div>
@@ -29,6 +35,50 @@ function LandingPage() {
                 <p> {translations[language].professional} <span>{translations[language].backend}</span></p>
               </div>
             </section>
+            </div>
+            <div className="fullPage aboutMe" id="aboutMe">
+
+              <div className="row">
+                <div className="col-3">
+
+                </div>
+
+                <div className="col col-txt-aboutMe">
+                  <h1>{translations[language].about}</h1>
+                  <div className="border-line"></div>
+                  <p>{translations[language].about_me_one}</p>
+                  <p>{translations[language].about_me_two}</p>
+                  <footer>
+                    <button 
+                    className="see-more"
+                    onClick={() => window.location.href = '/about'}
+                    >                
+                      {translations[language].button_experience}                
+                    </button>
+                    <button 
+                      className="see-projects"
+                      onClick={() => window.location.hash = '#projectsPage'}
+                    >
+                      {translations[language].button_projects}                
+                    </button>
+                  </footer>
+
+                </div>
+              </div>
+              
+
+
+            </div>
+            <div className="fullPage projectsPage" id="projectsPage">
+              Projects
+            </div>
+          </div>
+        </div>
+        {/*
+
+        <div className="row flex">
+          <div className="col principal-container">
+
           </div>
           <div className="col-1 nav-principal">
             <nav className="display-flex-column">
@@ -55,6 +105,8 @@ function LandingPage() {
             </nav>
           </div>
         </div>
+        */}
+
       </main>
     </>
   );
