@@ -41,7 +41,7 @@
 
 .col-txt-aboutMe .border-line {
   border: 2px solid var(--highlight-color);
-  width: 100px;
+  width: 256px;
   margin-bottom: 16px;
 
 }
@@ -78,7 +78,7 @@
   font-size: var(--16px);
   font-weight: 500;
   font-style: normal;
-  color: var(--white);
+  color: #070429;
 
   height: 36px;
   padding: 0 12px;

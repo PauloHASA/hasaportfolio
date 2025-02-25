@@ -16,6 +16,7 @@ function HeaderGlobal({ language, setLanguage }) {
   return(
     <>
       <header className="header-landingPage">
+
         <div className="change-language">
           <button onClick={() => setLanguage('pt')}>
             <img src={images.logos.icon_brasil} alt="" />
@@ -27,7 +28,8 @@ function HeaderGlobal({ language, setLanguage }) {
             <img src={images.logos.icon_espanha} alt="" />
           </button>
         </div>
-        <section className="flex">
+
+        <section className="flex section-HeaderGlobal">
           {navigate.pathname === "/" ? (
             <nav>
               <a href="#homePage">

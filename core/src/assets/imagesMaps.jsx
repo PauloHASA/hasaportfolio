@@ -28,6 +28,7 @@ import icon_usa from "./icons/icon-usa.png";
 import icon_espanha from "./icons/icon-espanha.png";
 import nodejs from "./icons/nodejs.svg";
 import django from "./icons/django.svg";
+import dev_img from "./icons/dev_img.jpg";
 import img_1 from "./parallax-img/img-1.png";
 import img_2 from "./parallax-img/img-2.png";
 import img_3 from "./parallax-img/img-3.png";
@@ -64,6 +65,7 @@ const images = {
     icon_brasil:icon_brasil,
     icon_usa:icon_usa,
     icon_espanha:icon_espanha,
+    dev_img:dev_img,
   },
   paralla_img:{
     img_1:img_1,

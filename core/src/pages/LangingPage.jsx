@@ -6,9 +6,10 @@ import { useState } from "react";
 import HeaderGlobal from "./HeaderGlobal"
 import translations from "../data/translations.json"
 
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import Spline from '@splinetool/react-spline';
 
 import Images from "../assets/imagesMaps";
+import images from "../assets/imagesMaps";
 
 
 function LandingPage() {
@@ -19,13 +20,19 @@ function LandingPage() {
     
   };
 
+  const github_url = "https://github.com/PauloHASA"
+  const linkedin_url = "https://www.linkedin.com/in/paulo-henrique-almeida-da-silva-alves-55a17328b/"
+  const whatsapp_url = "https://wa.me/5511963965062"
+
+
   return(
     <>
       <main  className="flex display-flex-column main-landingPage">
         <HeaderGlobal language={language} setLanguage={handleLanguageChange} />
-        <div className="row flex justify-content-md-center row-fullpage">
+        <div className="row  justify-content-md-center row-fullpage">
           <div className="col-9">
             <div className="fullPage homePage" id="homePage">
+              
             <section>
               <h4> {translations[language].greeting} <span>{translations[language].name}</span></h4>
               <div className="border-line"></div>
@@ -34,13 +41,39 @@ function LandingPage() {
                 <p> {translations[language].professional} <span>{translations[language].frontend}</span></p>
                 <p> {translations[language].professional} <span>{translations[language].backend}</span></p>
               </div>
+
+              <div className="icons-socialmedia" style={{padding: '1rem 0 0 0'}}>
+              <Link to={github_url} target="_blank" >
+                <i className="bi bi-github"></i>
+              </Link>
+              <Link to={linkedin_url} target="_blank">
+                <i className="bi bi-linkedin"></i>
+              </Link>
+              <Link>
+                <i className="bi bi-envelope-arrow-up-fill"></i>
+              </Link>
+              <Link  to={whatsapp_url} target="_blank">
+                <i className="bi bi-whatsapp"></i>
+              </Link>
+            </div>
             </section>
+
+            <section className="robot-spline">
+                <Spline
+                  scene="https://prod.spline.design/0EOius4itJaCm9t6/scene.splinecode" 
+                />
+            </section>
+
+
             </div>
             <div className="fullPage aboutMe" id="aboutMe">
 
-              <div className="row">
-                <div className="col-3">
-
+              <div className="row" style={{height: '100%', alignItems: 'center'}}>
+                <div className="col" style={{alignItems: 'center'}}>
+                  <div className="box-imgDev">
+                    <div className="border"></div>
+                    <img src={images.logos.dev_img} alt="" />
+                  </div>
                 </div>
 
                 <div className="col col-txt-aboutMe">
@@ -69,8 +102,55 @@ function LandingPage() {
 
 
             </div>
-            <div className="fullPage projectsPage" id="projectsPage">
-              Projects
+
+            <div className="fullPage display-flex-column projectsPage" id="projectsPage" style={{padding: '0rem 0'}}>
+              
+              <div className="row" style={{margin: '0 0 3rem 0'}}>
+                <div className="col">
+                  <div className=" background-glass img-content">
+                    <img src={images.logos.wellnova_img} alt="" />
+                  </div>
+                </div>
+                <div className="col display-flex-column default-text-project">
+                  <h5>
+                    {translations[language].project_details_wellnova_title}                
+                  </h5>
+
+                  <p>
+                    {translations[language].project_details_wellnova}                
+                  </p>
+                  <div className="flex"></div>
+                  <Link to={'https://smartion.ai/'} target="_blank" rel="noopener noreferrer">
+                    {translations[language].explore_project}                
+                  </Link>
+                  
+                </div>
+              </div>
+
+              <div className="row" style={{margin: '0 0 3rem 0'}}>
+              <div className="col display-flex-column default-text-project">
+                  <h4>
+                    {translations[language].project_details_digitalpm_title}                
+                  </h4>
+
+                  <p>
+                    {translations[language].project_details_digitalpm}                
+                  </p>
+                  <div className="flex"></div>
+                  <Link to={'https://ouronova.digital/'} target="_blank" rel="noopener noreferrer">
+                    {translations[language].explore_project}                
+                  </Link>
+                  
+                </div>
+
+                <div className="col">
+                  <div className=" background-glass img-content">
+                    <img src={images.logos.digitalpm} alt="" />
+                  </div>
+                </div>
+
+              </div>
+
             </div>
           </div>
         </div>

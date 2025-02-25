@@ -5,7 +5,8 @@
   --background-color: #050618;
   --white: #F1F1F1;
   --white-ice: #F1F1F1;
-  --highlight-color: #9B59B6;
+  /* --highlight-color: #9B59B6; */
+  --highlight-color: #9acddc;
 
 
   --font-titles: "Fugaz One", serif;
@@ -43,8 +44,8 @@ button {
 
 
 body {
-  background: linear-gradient(135deg, #1d1539, #18132f, #20183c);
-  /* background: #0c0553; */
+  /* background: linear-gradient(135deg, #1d1539, #18132f, #20183c); */
+  background: #070429;
   height: 100vh;
 
   padding: 1rem;
@@ -82,7 +83,7 @@ body {
 
 /* Puxador */
 ::-webkit-scrollbar-thumb {
-  background: #4e3e7e;
+  background: #9acddc;
   border-radius: 10px;
   transition: background 0.3s;
 }
