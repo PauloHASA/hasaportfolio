@@ -71,6 +71,7 @@ function LandingPage() {
               <div className="row" style={{height: '100%', alignItems: 'center'}}>
                 <div className="col" style={{alignItems: 'center'}}>
                   <div className="box-imgDev">
+                    <div className="border" style={{top:'-234px', left:'66px'}}></div>
                     <div className="border"></div>
                     <img src={images.logos.dev_img} alt="" />
                   </div>

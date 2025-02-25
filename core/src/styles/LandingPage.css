@@ -205,8 +205,8 @@
 
   .border{
     position: absolute;
-    top: -132px;
-    left: 14px;
+    top: -122px;
+    left: 3px;
     width: 368px;
     height: 445px;
     border: 8px solid var(--highlight-color) !important;
