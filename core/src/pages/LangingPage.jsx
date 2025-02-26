@@ -107,12 +107,12 @@ function LandingPage() {
             <div className="fullPage display-flex-column projectsPage" id="projectsPage" style={{padding: '0rem 0'}}>
               
               <div className="row" style={{margin: '0 0 3rem 0'}}>
-                <div className="col">
+                <div className="col-5">
                   <div className=" background-glass img-content">
                     <img src={images.logos.wellnova_img} alt="" />
                   </div>
                 </div>
-                <div className="col display-flex-column default-text-project">
+                <div className="col-5 display-flex-column default-text-project">
                   <h5>
                     {translations[language].project_details_wellnova_title}                
                   </h5>
@@ -129,7 +129,7 @@ function LandingPage() {
               </div>
 
               <div className="row" style={{margin: '0 0 3rem 0'}}>
-              <div className="col display-flex-column default-text-project">
+              <div className="col-5 display-flex-column default-text-project">
                   <h4>
                     {translations[language].project_details_digitalpm_title}                
                   </h4>
@@ -144,7 +144,7 @@ function LandingPage() {
                   
                 </div>
 
-                <div className="col">
+                <div className="col-5">
                   <div className=" background-glass img-content">
                     <img src={images.logos.digitalpm} alt="" />
                   </div>
